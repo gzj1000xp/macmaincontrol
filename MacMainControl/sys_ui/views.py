@@ -5,7 +5,7 @@ import os
 
 # Create your views here.
 def index(request):
-    script_list = SysUIScript.objects.filter(name__startswith='finder')
+    script_list = SysUIScript.objects.filter(name__startswith='sysui')
     context = {
         'script_list': script_list
     }
@@ -22,7 +22,7 @@ def get_content(request, script_id):
 
 
 def list(request):
-    script_list = SysUIScript.objects.filter(name__startswith='finder')
+    script_list = SysUIScript.objects.filter(name__startswith='sysui')
     output = ','.join([q.name for q in script_list])
     return HttpResponse(output)
 

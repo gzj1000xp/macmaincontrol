@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="268e3c2c-7226-4db3-996a-e32cf6cfb108" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MacMainControl/sys_ui/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MacMainControl/sys_ui/templates/sys_ui/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MacMainControl/finder/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MacMainControl/finder/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MacMainControl/finder/templates/finder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MacMainControl/finder/templates/finder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MacMainControl/finder/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MacMainControl/finder/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MacMainControl/MacMainControl/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MacMainControl/MacMainControl/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MacMainControl/MacMainControl/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MacMainControl/MacMainControl/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MacMainControl/sys_ui/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MacMainControl/sys_ui/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,30 +26,30 @@
         <counts>
           <entry key="README" value="1" />
           <entry key="finder_empty-trash" value="1" />
-          <entry key="html" value="4" />
-          <entry key="py" value="21" />
+          <entry key="html" value="5" />
+          <entry key="py" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="4" />
+          <entry key="HTML" value="5" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="21" />
+          <entry key="Python" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="README" value="211" />
-          <entry key="html" value="170" />
-          <entry key="py" value="1409" />
-          <entry key="txt" value="31" />
+          <entry key="html" value="192" />
+          <entry key="py" value="1515" />
+          <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="170" />
-          <entry key="PLAIN_TEXT" value="242" />
-          <entry key="Python" value="1409" />
+          <entry key="HTML" value="192" />
+          <entry key="PLAIN_TEXT" value="247" />
+          <entry key="Python" value="1515" />
         </counts>
       </usages-collector>
     </session>
@@ -57,56 +57,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MacMainControl/MacMainControl/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MacMainControl/finder/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="6" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MacMainControl/finder/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MacMainControl/finder/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1545384804084" expanded="true" signature="606:611" ph="..." />
-                <marker date="1545384804084" expanded="true" signature="851:852" ph="..." />
-                <marker date="1545384804084" expanded="true" signature="851:856" ph="..." />
-                <marker date="1545384804084" expanded="true" signature="1254:1259" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MacMainControl/finder/templates/finder/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+            <state relative-caret-position="60">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/templates/sys_ui/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -114,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="210">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -126,10 +89,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MacMainControl/MacMainControl/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+            <state relative-caret-position="330">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding>
                 <element signature="e#638#670#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MacMainControl/MacMainControl/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/apps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,7 +152,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -176,8 +169,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -187,9 +180,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MacMainControl/MacMainControl/urls.py" />
         <option value="$PROJECT_DIR$/MacMainControl/finder/admin.py" />
-        <option value="$PROJECT_DIR$/MacMainControl/MacMainControl/settings.py" />
         <option value="$PROJECT_DIR$/MacMainControl/MacMainControl/__init__.py" />
         <option value="$PROJECT_DIR$/MacMainControl/README" />
         <option value="$PROJECT_DIR$/MacMainControl/finder/templates/finder/list.html" />
@@ -197,10 +188,13 @@
         <option value="$PROJECT_DIR$/MacMainControl/finder/templates/finder/index.html" />
         <option value="$PROJECT_DIR$/MacMainControl/finder/models.py" />
         <option value="$PROJECT_DIR$/MacMainControl/sys_ui/models.py" />
-        <option value="$PROJECT_DIR$/MacMainControl/sys_ui/admin.py" />
-        <option value="$PROJECT_DIR$/MacMainControl/sys_ui/views.py" />
         <option value="$PROJECT_DIR$/MacMainControl/finder/views.py" />
         <option value="$PROJECT_DIR$/MacMainControl/sys_ui/urls.py" />
+        <option value="$PROJECT_DIR$/MacMainControl/sys_ui/templates/sys_ui/index.html" />
+        <option value="$PROJECT_DIR$/MacMainControl/sys_ui/views.py" />
+        <option value="$PROJECT_DIR$/MacMainControl/MacMainControl/urls.py" />
+        <option value="$PROJECT_DIR$/MacMainControl/sys_ui/admin.py" />
+        <option value="$PROJECT_DIR$/MacMainControl/MacMainControl/settings.py" />
       </list>
     </option>
   </component>
@@ -233,21 +227,6 @@
               <item name="MacMainControl" type="b2602c69:ProjectViewProjectNode" />
               <item name="MacMainControl" type="462c0819:PsiDirectoryNode" />
               <item name="MacMainControl" type="462c0819:PsiDirectoryNode" />
-              <item name="finder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MacMainControl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MacMainControl" type="462c0819:PsiDirectoryNode" />
-              <item name="MacMainControl" type="462c0819:PsiDirectoryNode" />
-              <item name="finder" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MacMainControl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MacMainControl" type="462c0819:PsiDirectoryNode" />
-              <item name="MacMainControl" type="462c0819:PsiDirectoryNode" />
-              <item name="finder" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="finder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -338,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545383964941</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sysui">
+      <created>1545384864395</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545384864395</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -390,7 +376,8 @@
     <MESSAGE value="connect" />
     <MESSAGE value="readme" />
     <MESSAGE value="finder" />
-    <option name="LAST_COMMIT_MESSAGE" value="finder" />
+    <MESSAGE value="sysui" />
+    <option name="LAST_COMMIT_MESSAGE" value="sysui" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MacMainControl/manage.py">
@@ -405,13 +392,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MacMainControl/scripts/finder_empty-trash">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/MacMainControl/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MacMainControl/README">
       <provider selected="true" editor-type-id="text-editor">
@@ -456,53 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/MacMainControl/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="e#638#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/finder/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/finder/templates/finder/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MacMainControl/finder/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -517,12 +450,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/views.py">
+    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -537,13 +470,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/urls.py">
+    <entry file="file://$PROJECT_DIR$/MacMainControl/finder/templates/finder/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/templates/sys_ui/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MacMainControl/MacMainControl/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="e#638#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MacMainControl/finder/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MacMainControl/sys_ui/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MacMainControl/MacMainControl/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
         </state>
       </provider>
     </entry>

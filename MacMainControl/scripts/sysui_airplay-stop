@@ -1,0 +1,15 @@
+tell application "System Events"
+	tell process "SystemUIServer"
+		set apMenu to menu bar item 1 of menu bar 1 where description is "显示器菜单"
+		tell apMenu
+			click
+			if exists menu item "关闭隔空播放" of menu 1 then
+				click menu item "关闭隔空播放" of menu 1
+				return "正在关闭隔空播放..."
+			else
+				click apMenu
+				return "暂时无法关闭隔空播放"
+			end if
+		end tell
+	end tell
+end tell

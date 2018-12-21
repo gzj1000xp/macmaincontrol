@@ -1,0 +1,12 @@
+tell application "System Events"
+	tell process "SystemUIServer"
+		set volMenu to menu bar item 7 of menu bar 1
+		tell volMenu
+			click
+			get entire contents of menu 1
+			tell slider 1 of menu item 2 of menu 1
+				set value to 0.3
+			end tell
+		end tell
+	end tell
+end tell

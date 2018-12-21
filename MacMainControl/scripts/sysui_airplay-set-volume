@@ -1,0 +1,19 @@
+tell application "System Events"
+	tell process "SystemUIServer"
+		set apvMenu to menu bar item 7 of menu bar 1
+		tell apvMenu
+			click
+			if exists menu item "声音偏好设置…" of menu 1 then
+				click menu item "声音偏好设置…" of menu 1
+			else
+				click apvMenu
+				return "出了点问题，手动调一下音量吧"
+			end if
+		end tell
+	end tell
+	delay 1
+	tell process "System Preferences"
+		set value of slider "输出音量：" of window "声音" to 1
+	end tell
+	tell application "System Preferences" to quit
+end tell
