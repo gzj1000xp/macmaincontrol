@@ -9,7 +9,7 @@ def index(request):
     context = {
         'script_list': script_list
     }
-    return HttpResponse(render(request, 'finder/index.html', context))
+    return HttpResponse(render(request, 'sys_ui/index.html', context))
 
 
 def get_content(request, script_id):
