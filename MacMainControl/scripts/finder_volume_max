@@ -1,0 +1,3 @@
+tell application "Finder"
+	set volume 7
+end tell
