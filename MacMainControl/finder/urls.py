@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('list/', views.list),
+    path('cat/<int:script_id>/', views.get_content, name='get script content'),
 ]

@@ -9,7 +9,11 @@ def index(request):
     return HttpResponse("Hello, world. You're at the finder index.")
 
 
-def get_content(request, filename):
+def get_content(request, script_id):
+    script_name = FinderScript.objects.get(id=script_id).name
+    script_path = FinderScript.objects.get(id=script_id).path
+    filename = script_path + script_name
+
     script_content = FinderScript().read_script(filename)
     return HttpResponse(script_content)
 
