@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
+import os
 
 
 class FinderScript(models.Model):
@@ -12,3 +13,10 @@ class FinderScript(models.Model):
     def __str__(self):
         return self.name
 
+    def read_script(self, filename):
+        file_object = open(filename)
+        try:
+            file_context = file_object.read()
+        finally:
+            file_object.close()
+        return file_context
