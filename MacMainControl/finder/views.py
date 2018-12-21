@@ -3,10 +3,17 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 from .models import FinderScript
+from django.template import loader
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the finder index.")
+    script_list = FinderScript.objects.filter(name__startswith='finder')
+    #template = loader.get_template('finder/index.html')
+    context = {
+        'script_list': script_list
+    }
+    return HttpResponse(render(request, 'finder/index.html', context))
 
 
 def get_content(request, script_id):
