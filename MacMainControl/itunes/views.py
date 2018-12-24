@@ -42,14 +42,17 @@ def execute_script(request, script_id):
     con = filename
 
     try:
-        command = 'osascript ' + con
+        command = 'osascript -s s ' + con
         output = os.popen(command).readlines()
         #os.system('osascript ' + con)
         #output = "success"
     except 'Exception':
         output = "fail"
 
-    return HttpResponse(output)
+    context = {
+        'output': output
+    }
+    return HttpResponse(render(request, 'itunes/execute.html', context))
 
 
 def list_script(request, script_id):
