@@ -62,8 +62,9 @@ def insert_script(request):
     filepath = 'scripts/'
     output = []
     num = 0
+    SCRIPT_NAME='itunes'
     for filename in os.listdir(filepath):
-        if filename.split('_')[0] == 'itunes':
+        if filename.split('_')[0] == SCRIPT_NAME:
             queue = ItunesScript.objects.all()
 #            print(queue)
 #            print(queue.count())
@@ -71,7 +72,7 @@ def insert_script(request):
                 num = num + 1
                 ItunesScript.objects.create(name=filename, path=filepath)
                 output.append('Record ' + str(num) + ' insert success.')
-                output.append('\r\n')
+                #output.append('\r\n')
             else:
                 flag = 0
                 for sid in range(queue.count() + 1):
@@ -86,13 +87,16 @@ def insert_script(request):
                     num = num + 1
                     ItunesScript.objects.create(name=filename, path=filepath)
                     output.append('Record ' + str(num) + ' insert success.')
-                    output.append('\r\n')
+                    #output.append('\r\n')
                 else:
                     num = num + 1
-                    output.append('Record ' + str(num) + ' already exsists.')
-                    output.append('\r\n')
+                    output.append('Script ' + filename + ' already exsists.')
+                    #output.append('\r\n')
         else:
-            output.append('Didn\'t find script.')
-            output.append('\r\n')
-    return HttpResponse(output)
+            output.append('This script does not start as ' + SCRIPT_NAME + '.')
+            #output.append('\r\n')
+    context = {
+        'output': output
+    }
+    return HttpResponse(render(request, 'itunes/insert.html', context))
 

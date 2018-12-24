@@ -6,7 +6,11 @@
 </head>
 <body>
 
-<pre>{{ output }}</pre>
+<p>Insert result as below:</p>
+
+{% for o in output %}
+<pre>{{ o }}</pre>
+{% endfor %}
 
 </body>
 </html>
