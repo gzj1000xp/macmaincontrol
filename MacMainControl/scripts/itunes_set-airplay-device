@@ -1,0 +1,7 @@
+tell application "iTunes"
+	if AirPlay enabled = true then
+		set current AirPlay devices to {AirPlay device id 8054 of application "iTunes"}
+	else
+		beep
+	end if
+end tell

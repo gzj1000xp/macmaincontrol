@@ -1,0 +1,3 @@
+tell application "iTunes"
+	play playlist named "我的最爱"
+end tell

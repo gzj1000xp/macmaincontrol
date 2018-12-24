@@ -48,3 +48,51 @@ def execute_script(request, script_id):
         output = "fail"
 
     return HttpResponse(output)
+
+
+def list_script(request, script_id):
+    script_path = ItunesScript.objects.get(id=script_id).path
+    script_list = []
+    for filename in os.listdir(script_path):
+        script_list.append(filename)
+    return HttpResponse(script_list)
+
+
+def insert_script(request):
+    filepath = 'scripts/'
+    output = []
+    num = 0
+    for filename in os.listdir(filepath):
+        if filename.split('_')[0] == 'itunes':
+            queue = ItunesScript.objects.all()
+#            print(queue)
+#            print(queue.count())
+            if queue.count() == 0:
+                num = num + 1
+                ItunesScript.objects.create(name=filename, path=filepath)
+                output.append('Record ' + str(num) + ' insert success.')
+                output.append('\r\n')
+            else:
+                flag = 0
+                for sid in range(queue.count() + 1):
+                    try:
+                        if queue.get(id=sid).name == filename:
+                            flag = flag + 1
+                        else:
+                            flag = flag
+                    except:
+                        pass
+                if flag == 0:
+                    num = num + 1
+                    ItunesScript.objects.create(name=filename, path=filepath)
+                    output.append('Record ' + str(num) + ' insert success.')
+                    output.append('\r\n')
+                else:
+                    num = num + 1
+                    output.append('Record ' + str(num) + ' already exsists.')
+                    output.append('\r\n')
+        else:
+            output.append('Didn\'t find script.')
+            output.append('\r\n')
+    return HttpResponse(output)
+
