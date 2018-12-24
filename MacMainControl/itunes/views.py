@@ -42,8 +42,10 @@ def execute_script(request, script_id):
     con = filename
 
     try:
-        os.system('osascript ' + con)
-        output = "success"
+        command = 'osascript ' + con
+        output = os.popen(command).readlines()
+        #os.system('osascript ' + con)
+        #output = "success"
     except 'Exception':
         output = "fail"
 
