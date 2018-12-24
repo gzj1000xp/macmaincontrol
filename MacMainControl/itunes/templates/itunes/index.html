@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AppleScripts for itunes</title>
+</head>
+<body>
+
+<p>These are all I've got.</p>
+{% if script_list %}
+    <ul>
+    {% for script in script_list %}
+        <li><a href="/itunes/cat/{{ script.id }}/">{{ script.name }} <a href="/itunes/execute/{{ script.id }}">execute</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No scripts are available.</p>
+{% endif %}
+
+</body>
+</html>

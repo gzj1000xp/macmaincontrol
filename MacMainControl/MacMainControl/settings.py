@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'finder.apps.FinderConfig',
     'sys_ui.apps.SysUiConfig',
+    'itunes.apps.ItunesConfig',
 ]
 
 MIDDLEWARE = [
