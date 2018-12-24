@@ -1,1 +1,2 @@
 MacMainControl/settings.py
+*.sqlite3
