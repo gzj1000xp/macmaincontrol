@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>AppleScripts for system UI server</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'sys_ui/style.css' %}">
 </head>
 <body>
 
-<p>These are all I've got.</p>
+<p>These are all I've got: </p>
 {% if script_list %}
     <ul>
     {% for script in script_list %}
-        <li><a href="/sys_ui/cat/{{ script.id }}/">{{ script.name }} <a href="/sys_ui/execute/{{ script.id }}">execute</a></li>
+        <li><a href="/sys_ui/execute/{{ script.id }}" class="button">execute</a> <a href="/sys_ui/cat/{{ script.id }}/">{{ script.name }} </li>
     {% endfor %}
     </ul>
 {% else %}
