@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AppleScripts for itunes</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+</head>
+<body>
+
+<p>This is index. </p>
+{% if script_list %}
+    <ul>
+    {% for script in script_list %}
+        <li><a href="/{{ script }}/">{{ script }}</li>
+
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No scripts are available.</p>
+{% endif %}
+
+</body>
+</html>

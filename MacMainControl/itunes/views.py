@@ -6,12 +6,17 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 from .models import ItunesScript
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.http import Http404
 import os
 
 
 def index(request):
-    script_list = ItunesScript.objects.filter(name__startswith='itunes')
+    #script_list = get_object_or_404(ItunesScript, name__startswith='itunes')
+    try:
+        script_list = ItunesScript.objects.filter(name__startswith='itunes')
+    except ItunesScript.Doesnotexist:
+        raise Http404("Script doesn\'t exist.")
     context = {
         'script_list': script_list
     }

@@ -21,4 +21,5 @@ urlpatterns = [
     path('finder/', include('finder.urls')),
     path('sys_ui/', include('sys_ui.urls')),
     path('itunes/', include('itunes.urls')),
+    path('', include('index.urls')),
 ]
