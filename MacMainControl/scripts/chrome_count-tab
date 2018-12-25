@@ -1,0 +1,6 @@
+tell application "Google Chrome"
+	tell its window 1
+		set theTabs to count of tabs -- how many open tab
+		get theTabs
+	end tell
+end tell

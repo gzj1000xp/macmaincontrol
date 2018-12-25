@@ -1,0 +1,3 @@
+tell application "Google Chrome"
+	get title of bookmark folder of bookmark folders
+end tell

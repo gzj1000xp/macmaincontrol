@@ -1,0 +1,7 @@
+set myLink to "https://www.google.com/"
+
+tell application "Google Chrome"
+	tell its window 1
+		set URL of (make new tab) to myLink
+	end tell
+end tell

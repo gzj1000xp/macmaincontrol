@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert completed.</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'chrome/style.css' %}">
+</head>
+<body>
+
+<p>Insert result as below:</p>
+
+{% for o in output %}
+<pre>{{ o }}</pre>
+{% endfor %}
+
+</body>
+</html>

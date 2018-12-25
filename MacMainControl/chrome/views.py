@@ -1,63 +1,72 @@
+from django.shortcuts import render
+
+# Create your views here.
 from django.http import HttpResponse
-from .models import SysUIScript
+from .models import ChromeScript
 from django.shortcuts import render
 import os
 
-# Create your views here.
+
 def index(request):
-    script_list = SysUIScript.objects.filter(name__startswith='sysui')
+    script_list = ChromeScript.objects.filter(name__startswith='chrome')
     context = {
         'script_list': script_list
     }
-    return HttpResponse(render(request, 'sys_ui/index.html', context))
+    return HttpResponse(render(request, 'chrome/index.html', context))
 
 
 def get_content(request, script_id):
-    script_name = SysUIScript.objects.get(id=script_id).name
-    script_path = SysUIScript.objects.get(id=script_id).path
+    script_name = ChromeScript.objects.get(id=script_id).name
+    script_path = ChromeScript.objects.get(id=script_id).path
     filename = script_path + script_name
 
-    script_content = SysUIScript().read_script(filename)
+    script_content = ChromeScript().read_script(filename)
     return HttpResponse(script_content)
 
 
 def list(request):
-    script_list = SysUIScript.objects.filter(name__startswith='sysui')
+    script_list = ChromeScript.objects.filter(name__startswith='chrome')
     output = ','.join([q.name for q in script_list])
     return HttpResponse(output)
 
 
 def execute_script(request, script_id):
-    script_name = SysUIScript.objects.get(id=script_id).name
-    script_path = SysUIScript.objects.get(id=script_id).path
+    script_name = ChromeScript.objects.get(id=script_id).name
+    script_path = ChromeScript.objects.get(id=script_id).path
     filename = script_path + script_name
 
     print(filename)
     con = filename
 
+#   使用os模块的popen方法来读取命令执行返回值。
     try:
-        os.system('osascript ' + con)
-        output = "success"
+        command = 'osascript -s s ' + con
+        output = os.popen(command).readlines()
+#        os.system('osascript ' + con)
+#        output = "success"
     except 'Exception':
         output = "fail"
 
-    return HttpResponse(output)
+    context = {
+        'output': output
+    }
+    return HttpResponse(render(request, 'chrome/execute.html', context))
 
 
 def insert_script(request):
     filepath = 'scripts/'
     output = []
     num = 0
-    SCRIPT_NAME='sysui'
+    SCRIPT_NAME='chrome'
     for filename in os.listdir(filepath):
         if filename.split('_')[0] == SCRIPT_NAME:
-            queue = SysUIScript.objects.all()
+            queue = ChromeScript.objects.all()
 #            print(queue)
 #            print(queue.count())
 #            判断现有脚本列表是否为空，空则直接导入，非空判断是否已存在。
             if queue.count() == 0:
                 num = num + 1
-                SysUIScript.objects.create(name=filename, path=filepath)
+                ChromeScript.objects.create(name=filename, path=filepath)
                 output.append('Record ' + str(num) + ' insert success.')
             else:
                 flag = 0
@@ -73,7 +82,7 @@ def insert_script(request):
 #                flag为0表示目标不在现在的列表中，执行导入
                 if flag == 0:
                     num = num + 1
-                    SysUIScript.objects.create(name=filename, path=filepath)
+                    ChromeScript.objects.create(name=filename, path=filepath)
                     output.append('Record ' + str(num) + ' insert success.')
                 else:
                     num = num + 1
@@ -83,4 +92,4 @@ def insert_script(request):
     context = {
         'output': output
     }
-    return HttpResponse(render(request, 'sys_ui/insert.html', context))
+    return HttpResponse(render(request, 'chrome/insert.html', context))

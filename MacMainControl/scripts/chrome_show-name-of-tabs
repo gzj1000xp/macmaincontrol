@@ -1,0 +1,3 @@
+tell application "Google Chrome"
+	get title of tabs of window 1
+end tell

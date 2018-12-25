@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Execution results:</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'finder/style.css' %}">
+</head>
+<body>
+
+<p>Execution finished:</p>
+
+{% for o in output %}
+<pre>{{ o }}</pre>
+{% endfor %}
+
+
+</body>
+</html>

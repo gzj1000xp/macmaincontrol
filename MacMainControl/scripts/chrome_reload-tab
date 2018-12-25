@@ -1,0 +1,5 @@
+tell application "Google Chrome"
+	tell its window 1
+		reload active tab
+	end tell
+end tell
