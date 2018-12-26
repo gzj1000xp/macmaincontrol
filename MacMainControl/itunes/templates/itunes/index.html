@@ -9,10 +9,19 @@
 <body>
 
 <p>These are all I've got: </p>
-{% if script_list %}
+<ul>
+{% for script in script_list %}
+
+    <li><a href="/itunes/execute/{{ script.id }}" class="button">execute</a> <a href="/itunes/cat/{{ script.id }}/">{{ script.name }}</a></li>
+
+{% endfor %}
+</ul>
+<p>To get json information: </p>
+{% if script_list_dp %}
     <ul>
-    {% for script in script_list %}
-        <li><a href="/itunes/execute/{{ script.id }}" class="button">execute</a> <a href="/itunes/cat/{{ script.id }}/">{{ script.name }}</li>
+    {% for script in script_list_dp %}
+
+        <li><a href="/itunes/execute_dp/{{ script.id }}" class="button">execute</a> <a href="/itunes/cat/{{ script.id }}/">{{ script.name }}</a></li>
 
     {% endfor %}
     </ul>

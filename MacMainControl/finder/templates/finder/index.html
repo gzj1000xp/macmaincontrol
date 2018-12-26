@@ -12,7 +12,7 @@
 {% if script_list %}
     <ul>
     {% for script in script_list %}
-        <li> <a href="/finder/execute/{{ script.id }}" class="button">execute</a> <a href="/finder/cat/{{ script.id }}/">{{ script.name }}</li>
+        <li> <a href="/finder/execute/{{ script.id }}" class="button">execute</a> <a href="/finder/cat/{{ script.id }}/">{{ script.name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

@@ -10,7 +10,10 @@
 
 <p>Execution finished:</p>
 
-<pre>{{ output }}</pre>
+{% for o in output %}
+<pre>{{ o }}</pre>
+{% endfor %}
+
 
 </body>
 </html>
